@@ -6,7 +6,7 @@ SLAM is the computational method for constructing or updating a map of an unknow
 ### To Do List
 Begin with basic object detection with computer vision such as lane detection and sign detection on sample dataset
 - [ ] Research different implementation techniques such as Kalman Filter, Particle Filter, Graph-SLAM
-[ ] Choose tracking technique such as goodFeaturesToTrack or ORB in openCV
-[ ] Match tracked points frame to frame and then estimate pose transformation
-[ ] 3D mapping on Pangolin
+- [ ] Choose tracking technique such as goodFeaturesToTrack or ORB in openCV
+- [ ] Match tracked points frame to frame and then estimate pose transformation
+- [ ] 3D mapping on Pangolin
 
