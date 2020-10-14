@@ -8,5 +8,5 @@ SLAM stands for simultaneous localization and mapping and is the computational m
 - [ ] Mapping: Research different implementation techniques such as Kalman Filter, Particle Filter, Graph-SLAM
 - [ ] Mapping: Look into different tracking technique such as goodFeaturesToTrack or ORB in openCV
 - [ ] Match tracked points frame to frame and then estimate pose transformation
-- [ ] 3D mapping on Pangolin
+- [ ] 3D mapping of tracked poitns on Pangolin + use of g2opy for optimization
 
