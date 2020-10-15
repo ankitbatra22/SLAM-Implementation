@@ -5,7 +5,7 @@ SLAM stands for simultaneous localization and mapping and is the computational m
 
 ### To Do List
 - [ ] Localization: Lane detection using canny detector and hough transform. May look into spatial CNN's
-- [ ] Mapping: Research different implementation techniques such as Kalman Filter, Particle Filter, Graph-SLAM
+- [ ] Mapping: Research different mapping techniques that will be used. Focusing on Kalman Filter, Particle Filter, and Graph-SLAM
 - [ ] Mapping: Look into different tracking technique such as goodFeaturesToTrack or ORB in openCV
 - [ ] Match tracked points frame to frame and then estimate pose transformation
 - [ ] 3D mapping of tracked poitns on Pangolin + use of g2opy for optimization
