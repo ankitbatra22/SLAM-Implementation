@@ -1,3 +1,7 @@
+"""
+This file is to detect lanes in the highway.mp4 test video using canny edge detection.
+"""
+
 import cv2
 import numpy as np
 
