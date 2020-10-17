@@ -6,25 +6,21 @@ import cv2
 import numpy as np
 
 
+def apply_canny(image):
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    blur = cv2.GaussianBlur(gray, (5, 5), 0)
+    canny = cv2.Canny(blur, 110, 190)
+    return canny
 
-def canny_video():
 
-    cap = cv2.VideoCapture("highway.mp4")
+def region_of_interest(image):
+    height = image.shape[0]
+    polygon = np.array([[(230, height), (1000, height), (640, 420)]])
+    mask = np.zeros_like(image)
+    # FILL MASK WITH TRIANGE USING fillpoly(image, shape, color)
+    cv2.fillPoly(mask, polygon, 255)
+    masked_image = cv2.bitwise_and(image, mask)
+    return masked_image
 
-    while True:
-        ret, img = cap.read()
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        blur = cv2.GaussianBlur(gray, (5,5), 0)
-        canny = cv2.Canny(blur, 80, 110)
 
-        ret, mask = cv2.threshold(canny, 70, 255, cv2.THRESH_BINARY)
 
-        cv2.imshow("car", img)
-        cv2.imshow("video feed", mask)
-
-        if cv2.waitKey(1) & 0xFF ==ord('q'):
-            break
-    cap.release()
-    cv2.destroyAllWindows()
-
-canny_video()
