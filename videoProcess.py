@@ -1,3 +1,7 @@
+"""
+This file is to open and process the mp4 video to detect the lanes
+"""
+
 import cv2
 import laneDetection
 from laneDetection import apply_canny
