@@ -9,7 +9,7 @@ The dataset I will use is a dashcam of driving on the Highway 400 in Ontario. I 
 I chose this dataset to do my first test on and builld my model around because it is good quality, good lighting, and does not have many obstacles in it. The dataset is also not too small and I can accurately model it.  This dataset will be a good starting point for the model which I can optimize and further test on different datasets in different conditions. The video contains a watermark and a mirror at the top which will have to be accomodated for in preproccesing.
 
 ### To Do List
-- [ ] Localization: Lane detection using canny detector and hough transform. May look into spatial CNN's
+- [ ] Localization: Lane detection using canny edge detection and hough transform. May look into spatial CNN's
 - [ ] Mapping: Research different mapping techniques that will be used. Focusing on Kalman Filter, Particle Filter, and Graph-SLAM
 - [ ] Mapping: Look into different tracking technique such as goodFeaturesToTrack or ORB in openCV
 - [ ] Match tracked points frame to frame and then estimate pose transformation
