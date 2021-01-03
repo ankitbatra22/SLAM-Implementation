@@ -4,8 +4,8 @@ This file is to open and process the mp4 video to detect the lanes
 
 import cv2
 import numpy as np
-from laneDetection import apply_canny
-from laneDetection import region_of_interest
+from utils.laneDetection import apply_canny
+from utils.laneDetection import region_of_interest
 
 
 def show_lines(image, lines):
@@ -44,5 +44,6 @@ def open_video():
     cap.release()
     cv2.destroyAllWindows()
 
-
 open_video()
+
+
