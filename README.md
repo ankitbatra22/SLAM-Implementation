@@ -15,3 +15,7 @@ I chose this dataset to do my first test on and builld my model around because i
 - [ ] Match tracked points frame to frame and then estimate pose transformation
 - [ ] 3D mapping of tracked points will be done on Pangolin + use of g2opy for optimization
 
+How to use:
+
+1. Make sure your current working directory is at the highest level file, in this case it's `SLAM-Implementation`
+2. `python main.py --display highway.mp4`
