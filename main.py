@@ -7,7 +7,6 @@ import os
 @click.command()
 @click.option('--display/--no-display', default=False, help='something!')
 @click.argument('file', nargs=1)
-@click.argument("wongo", nargs=1)
 def display_video(display, file):
     if display:
         video_path = os.path.join(os.getcwd(),"videos")
