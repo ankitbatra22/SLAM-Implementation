@@ -2,6 +2,7 @@ import click
 from algorithms.hough_lanes import generate_lines
 from algorithms.ORB_features import draw_keypoints
 from algorithms.optical_flow import compute_optical_flow
+from algorithms import object_detection
 import cv2
 import os
 
@@ -19,7 +20,8 @@ def display_video(display, flow, file):
             ret, frame = cap.read()
             hough_transform = generate_lines(frame)
             orb_frame = draw_keypoints(frame, hough_transform)
-            cv2.imshow("highlighted", orb_frame)  # Shows original video with detected lane lines.
+            object_detect = object_detection.draw_boxes(frame, orb_frame)
+            cv2.imshow("highlighted", object_detect)  # Shows original video with detected lane lines.
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         cap.release()
