@@ -20,8 +20,8 @@ def display_video(display, flow, file):
             ret, frame = cap.read()
             hough_transform = generate_lines(frame)
             orb_frame = draw_keypoints(frame, hough_transform)
-            object_detect = object_detection.draw_boxes(frame, orb_frame)
-            cv2.imshow("highlighted", object_detect)  # Shows original video with detected lane lines.
+            # object_detect = object_detection.draw_boxes(frame, orb_frame) This isn't working, debug
+            cv2.imshow("highlighted", orb_frame)  # Shows original video with detected lane lines.
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         cap.release()
