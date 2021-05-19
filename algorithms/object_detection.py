@@ -10,7 +10,7 @@ from detecto import core, utils, visualize
 def draw_boxes(original_image, new_image):
     model = core.Model()
     labels, boxes, scores = model.predict_top(original_image)
-    print(labels, boxes, scores)
+    # print(labels, boxes, scores)
 
     for i, box in enumerate(boxes):
         if scores[i] > 0.6:
@@ -18,7 +18,7 @@ def draw_boxes(original_image, new_image):
             w = x_low - x
             h = y_low - y
 
-            cv2.rectangle(new_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.rectangle(new_image, (int(x), int(y)), (int(x + w), int(y + h)), (0, 255, 0), 2)
 
     new_image = cv2.cvtColor(new_image, cv2.COLOR_BGR2RGB)
 
