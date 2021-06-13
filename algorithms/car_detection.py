@@ -36,6 +36,7 @@ def draw_car_boxes(frames, processed_image):
   gray = cv2.cvtColor(rect_img, cv2.COLOR_BGR2GRAY)
   car_cascade = cv2.CascadeClassifier('utils/cars.xml')
   cars = car_cascade.detectMultiScale(gray, 1.1, 4, minSize=(12,12))
+  
   for (x, y, w, h) in cars:
     cv2.rectangle(processed_image,(x, y),(x + w,y + h),(0, 0, 255), 2)
     font = cv2.FONT_HERSHEY_DUPLEX
@@ -43,16 +44,6 @@ def draw_car_boxes(frames, processed_image):
 
   return processed_image
 
-"""while True:
-  ret, frames = cap.read()
-  draw_car_boxes(frames)
-  cv2.imshow('testing', frames)
-
-  if cv2.waitKey(33) == 13:
-    break
-
-cap.release()
-cv2.destroyAllWindows()"""
 
 
 
