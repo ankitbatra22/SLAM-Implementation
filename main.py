@@ -31,18 +31,17 @@ def display_video(display, flow, file):
         video_path = os.path.join(os.getcwd(), "videos")
         print(os.path.join(video_path, file))
         cap = cv2.VideoCapture(os.path.join(video_path, file))
-
         ret, prev = cap.read()
 
         while cap.isOpened():
             ret, next = cap.read()
-
             rgb = compute_optical_flow(prev, next)
             cv2.imshow("highlighted", rgb)  # Shows original video with detected lane lines.
 
             prev = next
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
+    
         cap.release()
         cv2.destroyAllWindows()
 
