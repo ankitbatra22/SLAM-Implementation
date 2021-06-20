@@ -15,7 +15,7 @@ def show_lines(image, lines):
         for line in lines:
             x1, y1, x2, y2 = line.reshape(4)
             print(x1, x2, y1, y2)
-            cv2.line(line_image, (x1, y1), (x2, y2), (0, 255, 0), 10)
+            cv2.line(line_image, (x1, y1), (x2, y2), (255, 0, 0), 10)
             # cv2.addWeighted(image, 0.8, line_image, 1, 0)
 
     return line_image

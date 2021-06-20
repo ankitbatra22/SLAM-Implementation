@@ -18,7 +18,7 @@ def draw_boxes(original_image, new_image):
             w = x_low - x
             h = y_low - y
 
-            cv2.rectangle(new_image, (int(x), int(y)), (int(x + w), int(y + h)), (0, 255, 0), 2)
+            cv2.rectangle(new_image, (int(x), int(y)), (int(x + w), int(y + h)), (255, 0, 0), 2)
 
     new_image = cv2.cvtColor(new_image, cv2.COLOR_BGR2RGB)
 
