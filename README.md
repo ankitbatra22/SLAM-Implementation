@@ -9,8 +9,8 @@ The dataset I will use is a dashcam of driving on the Highway 400 in Ontario. I 
 ### Screenshots:
 
 <p float="left">
-  <img src="images/ResultImage1.png" width="400" />
-  <img src="images/ResultImage2.png" width="450" /> 
+  <img src="images/ResultImage1.png" width="600" />
+  <img src="images/ResultImage2.png" width="600" /> 
 </p>
 
 
