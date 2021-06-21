@@ -6,9 +6,12 @@ SLAM stands for simultaneous localization and mapping and is the computational m
 ### Dataset
 The dataset I will use is a dashcam of driving on the Highway 400 in Ontario. I found this dashcam footage on YouTube and it can be found here: https://www.youtube.com/watch?v=p_DcquxYvzk
 
-### Screenshot:
+### Screenshots:
 
-<p align="center"><img src="images/ResultImage1.png" width="600"></p>
+<p float="left">
+  <img src="images/ResultImage1.png" width="300" />
+  <img src="images/ResultImage2.png" width="300" /> 
+</p>
 
 
 I chose this dataset to do my first test on and builld my model around because it is good quality, good lighting, and does not have many obstacles in it. The dataset is also not too small and I can accurately model it.  This dataset will be a good starting point for the model which I can optimize and further test on different datasets in different conditions. The video contains a watermark and a mirror at the top which will have to be accomodated for in preproccesing.
